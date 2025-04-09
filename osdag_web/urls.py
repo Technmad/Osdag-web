@@ -4,6 +4,7 @@ from django.urls import path
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 
 # simplejwt imports 
 from rest_framework_simplejwt.views import TokenVerifyView
@@ -13,6 +14,7 @@ from rest_framework_simplejwt.views import (
 )
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='/osdag-web/', permanent=False)),   # Add this line
     path('admin/', admin.site.urls),
     path('', include('osdag.urls')),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
