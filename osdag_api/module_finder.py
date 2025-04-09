@@ -1,8 +1,8 @@
 from osdag_api.modules import fin_plate_connection,end_plate_connection,cleat_angle_connection,seated_angle_connection
 from types import ModuleType
 import typing
-from typing import Dict, Any, List, _Protocol
-class ModuleApiType(_Protocol):
+from typing import Dict, Any, List, Protocol
+class ModuleApiType(Protocol):
 
     def validate_input(self, input_values: Dict[str, Any]) -> None:
         """Validate type for all values in design dict. Raise error when invalid"""
