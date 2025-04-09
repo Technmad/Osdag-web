@@ -17,7 +17,7 @@ from osdag.web_api.endplate_outputView import EndPLateOutputData
 from osdag.web_api.cleatangle_outputView import CleatAngleOutputData
 from osdag.web_api.seatedangle_outputView import SeatedAngleOutputData
 # temporary
-app_name = 'osdag-web/'
+app_name = 'osdag'
 
 
 urlpatterns = [
